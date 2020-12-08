@@ -25,4 +25,26 @@ class User extends CI_Controller
         $this->load->view('user/pesan', $data);
         $this->load->view('templates/footer');
     }
+
+    public function pengiriman(){
+        $data['title'] = 'My Profile';
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+
+        $this->load->view('templates/header', $data);
+        $this->load->view('user/sidebar', $data);
+        $this->load->view('templates/topbar', $data);
+        $this->load->view('user/pengiriman', $data);
+        $this->load->view('templates/footer');
+    }
+
+    public function riwayat(){
+        $data['title'] = 'My Profile';
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+
+        $this->load->view('templates/header', $data);
+        $this->load->view('user/sidebar', $data);
+        $this->load->view('templates/topbar', $data);
+        $this->load->view('user/riwayat', $data);
+        $this->load->view('templates/footer');
+    }
 }

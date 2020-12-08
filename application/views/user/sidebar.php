@@ -30,6 +30,20 @@
         </a>
     </li>
 
+    <li class="nav-item">
+        <a class="nav-link" href="<?php echo base_url()?>user/pengiriman">
+            <i class="fas fa-fw fa-truck"></i>
+            <span>Pesan</span>
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="<?php echo base_url()?>user/riwayat">
+            <i class="fas fa-fw fa-history"></i>
+            <span>Riwayat</span>
+        </a>
+    </li>
+
     <!-- Nav Item - Charts -->
     <li class="nav-item">
         <a class="nav-link" href="<?= base_url('auth/logout'); ?>">
