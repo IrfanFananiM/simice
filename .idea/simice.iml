@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/landing-fix/css" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/landing-fix/fonts" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/landing-fix/images" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/landing-page2/css-lading" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/landing-page2/fonts-landing" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/landing-page2/images-landing" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sb-admin2/css" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sb-admin2/img" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sb-admin2/js" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sb-admin2/scss" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sb-admin2/vendor" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

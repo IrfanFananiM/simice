@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/landing-fix/css" />
+      <path value="$PROJECT_DIR$/vendor/sb-admin2/img" />
+      <path value="$PROJECT_DIR$/vendor/landing-fix/images" />
+      <path value="$PROJECT_DIR$/vendor/sb-admin2/js" />
+      <path value="$PROJECT_DIR$/vendor/sb-admin2/vendor" />
+      <path value="$PROJECT_DIR$/vendor/landing-page2/images-landing" />
+      <path value="$PROJECT_DIR$/vendor/sb-admin2/css" />
+      <path value="$PROJECT_DIR$/vendor/landing-page2/fonts-landing" />
+      <path value="$PROJECT_DIR$/vendor/sb-admin2/scss" />
+      <path value="$PROJECT_DIR$/vendor/landing-fix/fonts" />
+      <path value="$PROJECT_DIR$/vendor/landing-page2/css-lading" />
+    </include_path>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="5.3.0" />
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/vendor/autoload.php" />
+    </phpunit_settings>
+  </component>
+</project>
