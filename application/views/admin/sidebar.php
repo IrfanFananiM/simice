@@ -30,6 +30,13 @@
         </a>
     </li>
 
+    <li class="nav-item">
+        <a class="nav-link" href="<?php echo base_url()?>admin/riwayat">
+            <i class="fas fa-fw fa-history"></i>
+            <span>Riwayat Transaksi</span>
+        </a>
+    </li>
+
     <!-- Nav Item - Charts -->
     <li class="nav-item">
         <a class="nav-link" href="<?= base_url('auth/logout'); ?>">
