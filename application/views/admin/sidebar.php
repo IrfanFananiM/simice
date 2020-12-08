@@ -24,9 +24,9 @@
     </li>
 
     <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url()?>user/pesan">
-            <i class="fas fa-fw fa-shopping-bag"></i>
-            <span>Pesan</span>
+        <a class="nav-link" href="<?php echo base_url()?>admin/atur_produk">
+            <i class="fas fa-fw fa-edit"></i>
+            <span>Atur Produk</span>
         </a>
     </li>
 
