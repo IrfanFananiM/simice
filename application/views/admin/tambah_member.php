@@ -3,6 +3,21 @@
 
     <!-- Page Heading -->
     <h1 class="h3 mb-4 text-gray-800">Tambah Member</h1>
+    <!-- <h1 class="h3 mb-4 text-gray-800">Member Simice</h1>
+
+    <a href="" class="btn btn-primary mb-3" data-toggle="modal" data-target="#newSubMenuModal">Add New Member</a>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Date Create</th>
+            </tr>
+        </thead>
+
+    </table> -->
 
     <div class="card mb-3" style="width: 100%">
         <form action="#" method="post">

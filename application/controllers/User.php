@@ -15,9 +15,11 @@ class User extends CI_Controller
         $this->load->view('templates/footer');
     }
 
-    public function pesan(){
+    public function pesan()
+    {
         $data['title'] = 'My Profile';
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $data['barang'] = $this->db->get('barang')->result_array();
 
         $this->load->view('templates/header', $data);
         $this->load->view('user/sidebar', $data);
@@ -26,9 +28,11 @@ class User extends CI_Controller
         $this->load->view('templates/footer');
     }
 
-    public function pengiriman(){
+    public function pengiriman()
+    {
         $data['title'] = 'My Profile';
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $data['barang'] = $this->db->get('barang')->result_array();
 
         $this->load->view('templates/header', $data);
         $this->load->view('user/sidebar', $data);
@@ -37,7 +41,8 @@ class User extends CI_Controller
         $this->load->view('templates/footer');
     }
 
-    public function riwayat(){
+    public function riwayat()
+    {
         $data['title'] = 'My Profile';
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 

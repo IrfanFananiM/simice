@@ -33,7 +33,7 @@
     <li class="nav-item">
         <a class="nav-link" href="<?php echo base_url()?>user/pengiriman">
             <i class="fas fa-fw fa-truck"></i>
-            <span>Pesan</span>
+            <span>Pengiriman</span>
         </a>
     </li>
 
