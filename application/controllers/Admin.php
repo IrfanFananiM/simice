@@ -7,6 +7,8 @@ class Admin extends CI_Controller
     {
         $data['title'] = 'Dashboard';
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $this->load->model('Model_user', 'users');
+        $data['list_user'] = $this->users->tampil();
 
         $this->load->view('templates/header', $data);
         $this->load->view('admin/sidebar', $data);
@@ -26,6 +28,7 @@ class Admin extends CI_Controller
         $this->load->view('admin/tambah_member', $data);
         $this->load->view('templates/footer');
     }
+
 
     public function atur_produk()
     {

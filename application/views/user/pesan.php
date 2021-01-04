@@ -5,7 +5,7 @@
     <h1 class="h3 mb-4 text-gray-800">Pesan Produk</h1>
 
     <div class="card mb-3">
-        <?php echo form_open_multipart('pesanan/tambah'); ?>
+        <?= form_open_multipart('pesanan/tambah'); ?>
 
         <div class="form-group">
             <span>Order Jenis</span>

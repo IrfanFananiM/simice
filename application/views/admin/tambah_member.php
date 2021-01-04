@@ -3,10 +3,11 @@
 
     <!-- Page Heading -->
     <h1 class="h3 mb-4 text-gray-800">Tambah Member</h1>
-    <!-- <h1 class="h3 mb-4 text-gray-800">Member Simice</h1>
+    <!-- <h1 class="h3 mb-4 text-gray-800">Member<h1>
 
-    <a href="" class="btn btn-primary mb-3" data-toggle="modal" data-target="#newSubMenuModal">Add New Member</a>
+    <a href="" class="btn btn-primary mb-3" data-toggle="modal" data-target="#newSubMenuModal">Add New Member</a> -->
 
+    <!-- <?= form_open_multipart('adduser/tampil'); ?>
     <table class="table table-hover">
         <thead>
             <tr>
@@ -16,6 +17,9 @@
                 <th scope="col">Date Create</th>
             </tr>
         </thead>
+        <tbody>
+    
+        </tbody>
 
     </table> -->
 
