@@ -3,54 +3,31 @@
 
     <!-- Page Heading -->
     <h1 class="h3 mb-4 text-gray-800">Tambah Member</h1>
-    <!-- <h1 class="h3 mb-4 text-gray-800">Member<h1>
 
-    <a href="" class="btn btn-primary mb-3" data-toggle="modal" data-target="#newSubMenuModal">Add New Member</a> -->
-
-    <!-- <?= form_open_multipart('adduser/tampil'); ?>
-    <table class="table table-hover">
-        <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Name</th>
-                <th scope="col">Email</th>
-                <th scope="col">Date Create</th>
-            </tr>
-        </thead>
-        <tbody>
-    
-        </tbody>
-
-    </table> -->
-
-    <div class="card mb-3" style="width: 100%">
+    <div class="card mb-3" style="width: 50%">
         <form action="#" method="post">
             <div class="form-group">
-                <span>Nama</span>
-                <input class="form-control" type="text" name="jumlah_tube" placeholder="Nama">
+                <input class="form-control" type="text" id="name" name="name" placeholder="Nama Lengkap" value="<?= set_value('name'); ?>">
+                <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
             </div>
 
             <div class="form-group">
-                <span>Tanggal Lahir</span>
-                <input class="form-control" type="date" name="jumlah_cube" placeholder="Jumlah">
+                <input class="form-control" type="text" id="email" name="email" placeholder="Email" value="<?= set_value('email'); ?>">
+                <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
             </div>
 
             <div class="form-group">
-                <span>Gender</span>
-                <input class="form-control" type="text" name="jumlah_cube" placeholder="Gender">
+                <input class="form-control" type="password" id="password1" name="password1" placeholder="Password">
+                <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
             </div>
 
             <div class="form-group">
-                <span>Alamat</span>
-                <input class="form-control" type="text" name="jumlah_cube" placeholder="Alamat">
+                <input class="form-control" type="password" id="password2" name="password2" placeholder="Repeat Password">
             </div>
 
-            <div class="form-group">
-                <span>No Telpon</span>
-                <input class="form-control" type="number" name="jumlah_cube" placeholder="Telpon">
-            </div>
-
-            <button class="btn btn-primary" type="submit">Kirim</button>
+            <button class="btn btn-primary" type="submit">
+                Register Account
+            </button>
         </form>
     </div>
 

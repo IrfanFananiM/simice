@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Pesanan extends CI_Controller
+class Adduser extends CI_Controller
 {
     public function tambah()
     {
@@ -12,6 +12,4 @@ class Pesanan extends CI_Controller
             'date_created' => $this->input->post('date_created')
         ];
     }
-    
-    
 }

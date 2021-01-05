@@ -17,21 +17,21 @@
     </div>
 
     <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url()?>admin">
+        <a class="nav-link" href="<?php echo base_url() ?>admin">
             <i class="fas fa-fw fa-user"></i>
             <span>Member</span>
         </a>
     </li>
 
     <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url()?>admin/atur_produk">
+        <a class="nav-link" href="<?php echo base_url() ?>admin/atur_produk">
             <i class="fas fa-fw fa-edit"></i>
             <span>Atur Produk</span>
         </a>
     </li>
 
     <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url()?>admin/riwayat">
+        <a class="nav-link" href="<?php echo base_url() ?>admin/riwayat">
             <i class="fas fa-fw fa-history"></i>
             <span>Riwayat Transaksi</span>
         </a>
