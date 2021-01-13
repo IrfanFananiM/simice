@@ -56,12 +56,56 @@ class Admin extends CI_Controller
             ];
 
             $this->db->insert('user', $data);
-            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
+            $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">
             Congratulation! Member has been added.</div>');
             redirect('admin');
         }
     }
 
+    public function ubah($id)
+    {
+        $data['title'] = 'Dashboard';
+        $data['user'] = $this->db->get_where('user', ['id' => $id])->row_array();
+
+        $this->load->view('templates/header', $data);
+        $this->load->view('admin/sidebar', $data);
+        $this->load->view('templates/topbar', $data);
+        $this->load->view('admin/ubah', $data);
+        $this->load->view('templates/footer');
+    }
+
+    public function ubahMember()
+    {
+        $status = $this->model_user->ubahMember();
+        if ($status == true) {
+            $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Congratulation! Account has been updated.</div>');
+            redirect(base_url('admin/index'));
+        } else {
+            $this->session->set_flashdata('pesan', '<div class="alert alert-warning" role="alert">Failed! update.</div>');
+            redirect(base_url('admin/index'));
+        }
+    }
+
+    public function ubahMemberPass()
+    {
+        $this->form_validation->set_rules('password1', 'Password1', 'required|trim|min_length[3]|matches[password2]', [
+            'matches' => 'password dont matches',
+            'min_length' => 'password too short!'
+        ]);
+        $this->form_validation->set_rules('password2', 'Password2', 'required|trim|matches[password1]');
+        if ($this->form_validation->run() == true) {
+            $status = $this->model_user->ubahPassword();
+            if ($status == true) {
+                $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Congratulation! Password has been updated.</div>');
+                redirect(base_url('admin/index'));
+            } else {
+                $this->session->set_flashdata('pesan', '<div class="alert alert-warning" role="alert">Failed! update.</div>');
+                redirect(base_url('admin/index'));
+            }
+        } else {
+            redirect(base_url('admin/index'));
+        }
+    }
 
     public function atur_produk()
     {

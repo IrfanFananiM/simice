@@ -25,6 +25,7 @@
                 <input class="form-control" type="password" id="password2" name="password2" placeholder="Repeat Password">
             </div>
 
+            <a class="btn btn-danger" href="<?php echo base_url('admin/index') ?>" role="button">Cancel</a>
             <button class="btn btn-primary" type="submit">
                 Register Account
             </button>

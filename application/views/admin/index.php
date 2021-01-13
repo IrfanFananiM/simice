@@ -28,7 +28,7 @@
                         <td><?= $u['email']; ?></td>
                         <td><?= date('d F Y', $u['date_created']); ?></td>
                         <td>
-                            <a href="" class="btn btn-success btn-sm"><i class="fa fa-pen"></i></a>
+                            <a href="<?= base_url('admin/ubah/') . $u['id']; ?>" class="btn btn-success btn-sm"><i class="fa fa-pen"></i></a>
                             <a href="" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
                         </td>
                     </tr>
