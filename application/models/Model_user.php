@@ -44,4 +44,9 @@ class Model_user extends CI_Model
         $status = $this->db->update('user', $data, ['id' => $this->input->post('id')]);
         return $status;
     }
+
+    public function hapus($id) //hapus member
+    {
+        return $this->db->delete('user', array("id" => $id));
+    }
 }

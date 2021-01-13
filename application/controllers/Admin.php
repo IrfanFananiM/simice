@@ -107,6 +107,14 @@ class Admin extends CI_Controller
         }
     }
 
+    public function hapus($id)
+    {
+        $this->model_user->hapus($id);
+        // redirect(site_url('admin/index'));
+        $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Member has been Deleted.</div>');
+        redirect(base_url('admin/index'));
+    }
+
     public function atur_produk()
     {
         $data['title'] = 'Dashboard';
