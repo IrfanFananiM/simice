@@ -9,16 +9,18 @@ class Model_user extends CI_Model
         return $this->db->query($query)->result_array();
     }
 
-    public function getJenisEs(){
-        $query = $this->db->get('BARANG');
+    public function getJenisEs()
+    {
+        $query = $this->db->get('barang');
         return $query->result_array();
     }
 
-    public function getPengiriman(){
+    public function getPengiriman()
+    {
         $this->db->select('*');
-        $this->db->from('ORDER');
-        $this->db->join('BARANG', 'BARANG.ID = ORDER.ID_BARANG');
-        $this->db->where("STATUS !=", 3);
+        $this->db->from('order');
+        $this->db->join('barang', 'barang.id = order.id_barang');
+        $this->db->where("status !=", 3);
         $query = $this->db->get();
 
         return $query->result_array();

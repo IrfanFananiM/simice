@@ -12,10 +12,11 @@ class Menu_model extends CI_Model
         return $this->db->query($query)->result_array();
     }
 
-    public function getOrder(){
+    public function getOrder()
+    {
         $this->db->select('*');
-        $this->db->from('ORDER');
-        $this->db->join('BARANG', 'BARANG.ID = ORDER.ID_BARANG');
+        $this->db->from('order');
+        $this->db->join('barang', 'barang.id = order.id_barang');
         $query = $this->db->get();
 
         return $query->result_array();
