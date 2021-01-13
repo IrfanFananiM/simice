@@ -8,6 +8,9 @@ class Pesanan extends CI_Controller
         $data = [
             'id_barang' => $this->input->post('barang'),
             'jumlah' => $this->input->post('jumlah'),
+            'STATUS' => 0,
+            'ALAMAT' => $this->input->post('alamat'),
+            'PEMBAYARAN' => $this->input->post('pembayaran')
         ];
 
         $this->db->insert('order', $data);

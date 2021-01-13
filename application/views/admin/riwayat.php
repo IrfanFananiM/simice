@@ -9,20 +9,31 @@
             <thead>
                 <tr>
                     <th scope="col">No</th>
-                    <th scope="col">Tanggal</th>
+                    <!-- <th scope="col">Tanggal</th> -->
                     <th scope="col">Pesanan</th>
                     <th scope="col">Total</th>
                     <th scope="col">Status</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                <?php $no = 1; ?>
+                <?php foreach ($order as $b) : ?>
+                    <tr>
+                        <th scope="row"><?php echo $no ?></th>
+                        <!-- <td>08/12/2020</td> -->
+                        <td><?php echo $b["nama_barang"] ?></td>
+                        <td><?php echo ($b["harga_jual"]*$b["jumlah"]) ?></td>
+                        <td>Selesai</td>
+                    </tr>
+                    <?php $no++ ?>
+                <?php endforeach ?>
+                <!-- <tr>
                     <th scope="row">1</th>
                     <td>08/12/2020</td>
                     <td>Baru</td>
                     <td>1.000.000</td>
                     <td>Selesai</td>
-                </tr>
+                </tr> -->
             </tbody>
         </table>
     </div>

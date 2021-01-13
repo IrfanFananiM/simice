@@ -30,17 +30,17 @@
         </a>
     </li>
 
-    <li class="nav-item">
+    <!-- <li class="nav-item">
         <a class="nav-link" href="<?php echo base_url()?>user/pengiriman">
             <i class="fas fa-fw fa-truck"></i>
             <span>Pengiriman</span>
         </a>
-    </li>
+    </li> -->
 
     <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url()?>user/riwayat">
+        <a class="nav-link" href="<?php echo base_url()?>user/transaksi">
             <i class="fas fa-fw fa-history"></i>
-            <span>Riwayat</span>
+            <span>transaksi</span>
         </a>
     </li>
 

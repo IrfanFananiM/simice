@@ -13,17 +13,31 @@
                 <select name="barang" id="barang" class="form-control">
                     <option value="">Pilih jenis es</option>
                     <?php foreach ($barang as $b) : ?>
-                        <option value="<?= $b['id_barang']; ?>"><?= $b['nama']; ?></option>
+                        <option value="<?= $b['id']; ?>"><?= $b['nama_barang']; ?></option>
                     <?php endforeach; ?>
                 </select>
             </div>
         </div>
 
         <div class="form-group">
-            <span>Banyaknya es yang diorde (/pack)</span>
+            <span>Banyaknya es yang diorder (/pack)</span>
             <div class="form-group">
                 <input type="number" name="jumlah" class="form-control" placeholder="Jumlah yang dipesan" value="1" min="1">
             </div>
+        </div>
+
+        <div class="form-group">
+            <span>Alamat</span>
+            <div class="form-group">
+                <input type="text" name="alamat" class="form-control" placeholder="Jumlah yang dipesan" value="">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <span>Pembayaran</span>
+            <select class="form-control" id="exampleFormControlSelect1" name="pembayaran">
+                <option value="COD">COD</option>
+            </select>
         </div>
 
         <button class="btn btn-primary" type="submit">Pesan</button>
