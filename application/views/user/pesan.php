@@ -8,10 +8,14 @@
         <?= form_open_multipart('pesanan/tambah'); ?>
 
         <div class="form-group">
-            <span>Order Jenis</span>
+            <span>Pilih Jenis Es</span>
+
             <div class="form-group">
                 <select name="barang" id="barang" class="form-control">
-                    <option value="">Pilih jenis es</option>
+                <?php if(isset($id_barang)){ ?>
+                <option value="<?= $id_barang; ?>" selected><?= $nama_barang ?></option>
+                
+            <?php } ?>
                     <?php foreach ($barang as $b) : ?>
                         <option value="<?= $b['id']; ?>"><?= $b['nama_barang']; ?></option>
                     <?php endforeach; ?>
@@ -22,14 +26,14 @@
         <div class="form-group">
             <span>Banyaknya es yang diorder (/pack)</span>
             <div class="form-group">
-                <input type="number" name="jumlah" class="form-control" placeholder="Jumlah yang dipesan" value="1" min="1">
+                <input type="number" name="jumlah" class="form-control" placeholder="Jumlah yang dipesan" value="<?php echo $jumlah ?>" min="1">
             </div>
         </div>
 
         <div class="form-group">
             <span>Alamat</span>
             <div class="form-group">
-                <input type="text" name="alamat" class="form-control" placeholder="Jumlah yang dipesan" value="">
+                <input type="text" name="alamat" class="form-control" placeholder="Jumlah yang dipesan" value="<?php echo $user['alamat'] ?>" readonly>
             </div>
         </div>
 

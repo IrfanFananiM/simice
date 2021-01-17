@@ -2,7 +2,7 @@
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-4 text-gray-800"><?= $title; ?></h1>
+    <h1 class="h3 mb-4 text-gray-800">Profil Saya</h1>
 
     <div class="card mb-3" style="max-width: 540px;">
         <div class="row no-gutters">
@@ -13,7 +13,9 @@
                 <div class="card-body">
                     <h5 class="card-title"><?= $user['name']; ?></h5>
                     <p class="card-text"><?= $user['email']; ?></p>
-                    <p class="card-text"><small class="text-muted">Member siince<?= date('d F Y', $user['date_created']); ?></small></p>
+                    <p class="card-text"><?= $user['alamat']; ?></p>
+                    <p class="card-text"><small class="text-muted">Member sejak <?= date('d F Y', $user['date_created']); ?></small></p>
+                    <a class="btn btn-primary" href="user/editProfil" role="button">Edit</a>
                 </div>
             </div>
         </div>

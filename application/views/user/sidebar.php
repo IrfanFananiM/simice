@@ -40,7 +40,7 @@
     <li class="nav-item">
         <a class="nav-link" href="<?php echo base_url()?>user/transaksi">
             <i class="fas fa-fw fa-history"></i>
-            <span>transaksi</span>
+            <span>Riwayat Pesananan</span>
         </a>
     </li>
 
