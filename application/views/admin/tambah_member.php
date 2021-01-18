@@ -7,17 +7,17 @@
     <div class="card mb-3" style="width: 50%">
         <form action="#" method="post">
             <div class="form-group">
-                <input class="form-control" type="text" id="name" name="name" placeholder="Nama Lengkap" value="<?= set_value('name'); ?>">
+                <input class="form-control" type="text" id="name" name="name" placeholder="Nama Lengkap" value="<?= set_value('name'); ?>" required>
                 <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
             </div>
 
             <div class="form-group">
-                <input class="form-control" type="text" id="email" name="email" placeholder="Email" value="<?= set_value('email'); ?>">
+                <input class="form-control" type="text" id="email" name="email" placeholder="Email" value="<?= set_value('email'); ?>" required>
                 <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
             </div>
 
             <div class="form-group">
-                <input class="form-control" type="password" id="password1" name="password1" placeholder="Password">
+                <input class="form-control" type="password" id="password1" name="password1" placeholder="Password" required>
                 <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
             </div>
 

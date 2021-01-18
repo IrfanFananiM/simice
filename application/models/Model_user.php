@@ -65,4 +65,17 @@ class Model_user extends CI_Model
         $this->db->where("email", $email);
         $this->db->update("user", $hasil);
     }
+
+    public function ubahProduk()
+    {
+        $data = array(
+            'nama_barang' => $this->input->post('name'),
+            'harga_beli' => $this->input->post('harga_beli'),
+            'harga_jual' => $this->input->post('harga_jual'),
+            'stok' => $this->input->post('stok'),
+            'satuan' => $this->input->post('satuan'),
+        );
+        $status = $this->db->update('barang', $data);
+        return $status;
+    }
 }

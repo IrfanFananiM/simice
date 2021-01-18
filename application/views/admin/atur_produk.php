@@ -2,8 +2,8 @@
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-4 text-gray-800">Member Simice</h1>
-    <a class="btn btn-primary" href="<?php echo base_url() ?>admin/tambah_member" role="button">Tambah member</a>
+    <h1 class="h3 mb-4 text-gray-800">Produk Simice</h1>
+    <a class="btn btn-primary" href="<?php echo base_url() ?>admin/tambah_produk" role="button">Tambah Produk</a>
     <?= $this->session->flashdata('pesan'); ?>
 
     <div class="card mb-3" style="width: 100%">
@@ -11,10 +11,12 @@
             <thead>
                 <tr>
                     <th scope="col">No</th>
+                    <th scope="col">Kode Barang</th>
                     <th scope="col">Nama Barang</th>
-                    <th scope="col">Harga Beli</th>
-                    <th scope="col">Harga Jual</th>
-                    <th scope="col">Stok (dalam pack)</th>
+                    <th scope="col">Harga Beli (Rp.)</th>
+                    <th scope="col">Harga Jual (Rp.)</th>
+                    <th scope="col">Stok</th>
+                    <th scope="col">Satuan</th>
                     <th scope="col">Action</th>
 
                 </tr>
@@ -25,13 +27,15 @@
                 ?>
                     <tr>
                         <th scope="row"><?= $i; ?></th>
+                        <td><?= $b['kode_barang']; ?></td>
                         <td><?= $b['nama_barang']; ?></td>
                         <td><?= $b['harga_beli']; ?></td>
                         <td><?= $b['harga_jual']; ?></td>
                         <td><?= $b['stok']; ?></td>
+                        <td><?= $b['satuan']; ?></td>
                         <td>
-                            <a href="<?= base_url('admin/ubah/') . $b['id']; ?>" class="btn btn-success btn-sm"><i class="fa fa-pen"></i></a>
-                            <a onclick="deleteConfirm('<?= base_url('admin/hapus/') . $b['id']; ?>')" href="#!" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
+                            <a href="<?= base_url('admin/ubah_produk/') . $b['id']; ?>" class="btn btn-success btn-sm"><i class="fa fa-pen"></i></a>
+                            <a onclick="deleteConfirm('<?= base_url('admin/hapusProduk/') . $b['id']; ?>')" href="#!" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
                         </td>
                     </tr>
                 <?php $i++;

@@ -3,6 +3,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Admin extends CI_Controller
 {
+    // menu utama admin
     public function index()
     {
         $data['title'] = 'Dashboard';
@@ -17,6 +18,7 @@ class Admin extends CI_Controller
         $this->load->view('templates/footer');
     }
 
+    // controller menu add member
     public function tambah_member()
     {
         $data['title'] = 'Dashboard';
@@ -115,6 +117,7 @@ class Admin extends CI_Controller
         redirect(site_url('admin/index'));
     }
 
+    // controller menu atur produk
     public function atur_produk()
     {
         $data['title'] = 'Dashboard';
@@ -129,6 +132,73 @@ class Admin extends CI_Controller
         $this->load->view('templates/footer');
     }
 
+    public function tambah_produk()
+    {
+        $this->form_validation->set_rules('kode', 'Kode', 'required|trim');
+        $this->form_validation->set_rules('nama', 'Nama', 'required|trim');
+        $this->form_validation->set_rules('harga_beli', 'Harga_beli', 'required|trim');
+        $this->form_validation->set_rules('harga_jual', 'Harga_jual', 'required|trim');
+        $this->form_validation->set_rules('stok', 'Stok', 'required|trim');
+        $this->form_validation->set_rules('satuan', 'Satuan', 'required|trim');
+        if ($this->form_validation->run() == false) {
+            $data['title'] = 'Dashboard';
+            $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+
+            $this->load->view('templates/header', $data);
+            $this->load->view('admin/sidebar', $data);
+            $this->load->view('templates/topbar', $data);
+            $this->load->view('admin/tambah_produk', $data);
+            $this->load->view('templates/footer');
+        } else {
+            $data = [
+                'kode_barang' => $this->input->post('kode'),
+                'nama_barang' => $this->input->post('nama'),
+                'harga_beli' => $this->input->post('harga_beli'),
+                'harga_jual' => $this->input->post('harga_jual'),
+                'stok' => $this->input->post('stok'),
+                'satuan' => $this->input->post('satuan'),
+            ];
+            $db = $this->db->insert('barang', $data);
+            $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">
+            Congratulation! Member has been added.</div>');
+            redirect('admin/atur_produk');
+        }
+    }
+
+    public function ubah_produk($id)
+    {
+        $data['title'] = 'Dashboard';
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $data['barang'] = $this->db->get_where('barang', ['id' => $id])->row_array();
+
+        $this->load->view('templates/header', $data);
+        $this->load->view('admin/sidebar', $data);
+        $this->load->view('templates/topbar', $data);
+        $this->load->view('admin/ubah_produk', $data);
+        $this->load->view('templates/footer');
+    }
+
+    public function ubahProduk()
+    {
+        $status = $this->model_barang->ubahProduk();
+        if ($status == true) {
+            $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Congratulation! Produk has been updated.</div>');
+            redirect(base_url('admin/atur_produk'));
+        } else {
+            $this->session->set_flashdata('pesan', '<div class="alert alert-warning" role="alert">Failed update produk!.</div>');
+            redirect(base_url('admin/atur_produk'));
+        }
+    }
+
+    public function hapusProduk($id)
+    {
+        $this->model_barang->hapusProduk($id);
+        $this->session->set_flashdata('pesan', '<div class="alert alert-warning" role="alert">
+        Congratulation! Produk has been deleted.</div>');
+        redirect(site_url('admin/atur_produk'));
+    }
+
+    // controller menu riwayat
     public function riwayat()
     {
         $this->load->model('Menu_model');

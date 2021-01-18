@@ -50,6 +50,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['simice/admin/ubah/(:any)'] = 'admin/ubah/$1';
+$route['simice/admin/ubah_produk/(:any)'] = 'admin/ubah_produk/$1';
 $route['default_controller'] = 'landing_page';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
