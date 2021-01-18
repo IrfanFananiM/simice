@@ -19,7 +19,8 @@ class Model_barang extends CI_Model
             'stok' => $this->input->post('stok'),
             'satuan' => $this->input->post('satuan'),
         );
-        $status = $this->db->update('barang', $data);
+        $status = $this->db->update('barang', $data, ['id' => $this->input->post('id')]);
+
         return $status;
     }
 

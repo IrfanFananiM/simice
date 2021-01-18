@@ -9,6 +9,10 @@
         <?php echo form_open('admin/ubahProduk'); ?>
         <input class="form-control" type="text" id="id" name="id" placeholder="id" value="<?= $barang['id']; ?>" hidden>
         <div class="form-group">
+            <input class="form-control" type="text" id="kode" name="kode" placeholder="Kode Produk" value="<?= $barang['kode_barang']; ?>" required>
+            <?= form_error('nama', '<small class="text-danger pl-3">', '</small>'); ?>
+        </div>
+        <div class="form-group">
             <input class="form-control" type="text" id="nama" name="nama" placeholder="Nama Produk" value="<?= $barang['nama_barang']; ?>" required>
             <?= form_error('nama', '<small class="text-danger pl-3">', '</small>'); ?>
         </div>
