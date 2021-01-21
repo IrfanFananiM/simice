@@ -17,28 +17,28 @@
     </div>
 
     <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url()?>user">
+        <a class="nav-link" href="<?php echo base_url() ?>user">
             <i class="fas fa-fw fa-user"></i>
             <span>Akun</span>
         </a>
     </li>
 
     <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url()?>user/pesan">
+        <a class="nav-link" href="<?php echo base_url() ?>user/pesan">
             <i class="fas fa-fw fa-shopping-bag"></i>
             <span>Pesan</span>
         </a>
     </li>
 
     <!-- <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url()?>user/pengiriman">
+        <a class="nav-link" href="<?php echo base_url() ?>user/pengiriman">
             <i class="fas fa-fw fa-truck"></i>
             <span>Pengiriman</span>
         </a>
     </li> -->
 
     <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url()?>user/transaksi">
+        <a class="nav-link" href="<?php echo base_url() ?>user/transaksi">
             <i class="fas fa-fw fa-history"></i>
             <span>Riwayat Pesananan</span>
         </a>
@@ -46,7 +46,7 @@
 
     <!-- Nav Item - Charts -->
     <li class="nav-item">
-        <a class="nav-link" href="<?= base_url('auth/logout'); ?>">
+        <a class="nav-link" href="<?= base_url('auth/logout'); ?>" data-toggle="modal" data-target="#logoutModal">
             <i class="fas fa-fw fa-sign-out-alt"></i>
             <span>Logout</span></a>
     </li>
