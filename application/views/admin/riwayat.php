@@ -11,6 +11,7 @@
                     <th scope="col">No</th>
                     <!-- <th scope="col">Tanggal</th> -->
                     <th scope="col">Pesanan</th>
+                    <th scope="col">Jumlah</th>
                     <th scope="col">Total</th>
                     <th scope="col">Status</th>
                 </tr>
@@ -22,7 +23,8 @@
                         <th scope="row"><?php echo $no ?></th>
                         <!-- <td>08/12/2020</td> -->
                         <td><?php echo $b["nama_barang"] ?></td>
-                        <td><?php echo ($b["harga_jual"]*$b["jumlah"]) ?></td>
+                        <td><?php echo $b["jumlah"] ?></td>
+                        <td><?php echo ($b["harga_jual"] * $b["jumlah"]) ?></td>
                         <td>Selesai</td>
                     </tr>
                     <?php $no++ ?>
