@@ -7,7 +7,7 @@
 
             <div class="card o-hidden border-0 shadow-lg my-5">
                 <div class="card-body p-0">
-                    <!-- Nested Row within Card Body -->    
+                    <!-- Nested Row within Card Body -->
                     <div class="row">
                         <div class="col-lg">
                             <div class="p-5">
@@ -31,13 +31,13 @@
                                     </button>
                                 </form>
                                 <hr>
-                                <div class="text-center">
+                                <!-- <div class="text-center">
                                     <a class="small" href="forgot-password.html">Forgot Password?</a>
-                                </div>
+                                </div> -->
                                 <div class="text-center">
-                                    <a class="small" href="<?= base_url('auth/registration') ?>">Create an Account!</a>
+                                    <a class="medium" href="<?= base_url('auth/registration') ?>">Create an Account!</a>
                                     <br>
-                                    <a class="btn btn-primary" href="<?php echo base_url()?>" role="button">
+                                    <a class="btn btn-primary" href="<?php echo base_url() ?>" role="button">
                                         <i class="fas fa-chevron-circle-left"></i>
                                     </a>
                                 </div>
