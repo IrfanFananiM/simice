@@ -170,7 +170,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     <span></span>
                                 </div>
                             </div>
-                            <p class="mb-4">SIMICE dapat melakukan pembayaran melalui banyak cara. via atm, m-banking, virtual account, dompet digital.</p>
+                            <p class="mb-4">SIMICE saat ini hanya dapat melakukan pembayaran secara COD (Cash On Delivery), untuk transfer melalui bank masih dalam pengembangan.</p>
 
                         </div>
                         <div class="card-header p-0">
