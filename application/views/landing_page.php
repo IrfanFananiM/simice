@@ -59,7 +59,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <li><a href="#blog" class="scroll">Pelayanan</a></li>
                             <li><a class="scroll" href="#gallery">Produk</a></li>
                             <li><a href="#plans" class="scroll">Daftar Agen</a></li>
-                            <li><a href="#blog" class="scroll">Jasa Pengiriman</a></li>
                             <li><a href="#contact" class="scroll">Kontak</a></li>
                         </ul>
                     </nav>
@@ -264,7 +263,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 <div class="col-9 text-left">
                                     <h6>Location</h6>
                                     <p>SIMICE
-                                        <br>Surabaya. </p>
+                                        <br>Surabaya.
+                                    </p>
                                 </div>
                             </div>
                         </div>
